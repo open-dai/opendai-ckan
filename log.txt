@@ -1,0 +1,737 @@
+body:
+headers:Array
+(
+    [Host] => ckan.localhost
+    [User-Agent] => Mozilla/5.0 (Windows NT 5.1; rv:29.0) Gecko/20100101 Firefox/29.0
+    [Accept] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [Accept-Language] => it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3
+    [Accept-Encoding] => gzip, deflate
+    [Connection] => keep-alive
+)
+
+allGetVars:Array
+(
+)
+
+rootUri:/odaickan.php
+resourceUri:/
+isAjax:
+isXHR:
+path:/odaickan.php/
+url:http://ckan.localhost
+req:Slim\Http\Request Object
+(
+    [env:protected] => Slim\Environment Object
+        (
+            [properties:protected] => Array
+                (
+                    [REQUEST_METHOD] => GET
+                    [REMOTE_ADDR] => 158.102.29.146
+                    [SCRIPT_NAME] => /odaickan.php
+                    [PATH_INFO] => /
+                    [QUERY_STRING] => 
+                    [SERVER_NAME] => ckan.localhost
+                    [SERVER_PORT] => 80
+                    [HOST] => ckan.localhost
+                    [USER_AGENT] => Mozilla/5.0 (Windows NT 5.1; rv:29.0) Gecko/20100101 Firefox/29.0
+                    [ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+                    [ACCEPT_LANGUAGE] => it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3
+                    [ACCEPT_ENCODING] => gzip, deflate
+                    [CONNECTION] => keep-alive
+                    [slim.url_scheme] => http
+                    [slim.input] => 
+                    [slim.errors] => Resource id #7
+                    [slim.log] => Slim\Log Object
+                        (
+                            [writer:protected] => Slim\LogWriter Object
+                                (
+                                    [resource:protected] => Resource id #7
+                                )
+
+                            [enabled:protected] => 1
+                            [level:protected] => 4
+                        )
+
+                    [slim.flash] => Slim\Middleware\Flash Object
+                        (
+                            [settings:protected] => Array
+                                (
+                                    [key] => slim.flash
+                                )
+
+                            [messages:protected] => Array
+                                (
+                                    [prev] => Array
+                                        (
+                                        )
+
+                                    [next] => Array
+                                        (
+                                        )
+
+                                    [now] => Array
+                                        (
+                                        )
+
+                                )
+
+                            [app:protected] => Slim\Slim Object
+                                (
+                                    [name:protected] => default
+                                    [environment:protected] => Slim\Environment Object
+ *RECURSION*
+                                    [request:protected] => Slim\Http\Request Object
+ *RECURSION*
+                                    [response:protected] => Slim\Http\Response Object
+                                        (
+                                            [status:protected] => 200
+                                            [header:protected] => Slim\Http\Headers Object
+                                                (
+                                                    [headers:protected] => Array
+                                                        (
+                                                            [content-type] => text/html
+                                                        )
+
+                                                    [map:protected] => Array
+                                                        (
+                                                            [content-type] => Content-Type
+                                                        )
+
+                                                )
+
+                                            [body:protected] => 
+                                            [length:protected] => 0
+                                        )
+
+                                    [router:protected] => Slim\Router Object
+                                        (
+                                            [resourceUri:protected] => /
+                                            [routes:protected] => Array
+                                                (
+                                                    [0] => Slim\Route Object
+                                                        (
+                                                            [pattern:protected] => /package
+                                                            [callable:protected] => Closure Object
+                                                                (
+                                                                )
+
+                                                            [conditions:protected] => Array
+                                                                (
+                                                                )
+
+                                                            [name:protected] => 
+                                                            [params:protected] => Array
+                                                                (
+                                                                )
+
+                                                            [paramNames:protected] => Array
+                                                                (
+                                                                )
+
+                                                            [paramNamesPath:protected] => Array
+                                                                (
+                                                                )
+
+                                                            [methods:protected] => Array
+                                                                (
+                                                                    [0] => GET
+                                                                    [1] => HEAD
+                                                                )
+
+                                                            [middleware:protected] => Array
+                                                                (
+                                                                )
+
+                                                        )
+
+                                                    [1] => Slim\Route Object
+                                                        (
+                                                            [pattern:protected] => /package/:name
+                                                            [callable:protected] => Closure Object
+                                                                (
+                                                                    [parameter] => Array
+                                                                        (
+                                                                            [$name] => <required>
+                                                                        )
+
+                                                                )
+
+                                                            [conditions:protected] => Array
+                                                                (
+                                                                )
+
+                                                            [name:protected] => 
+                                                            [params:protected] => Array
+                                                                (
+                                                                )
+
+                                                            [paramNames:protected] => Array
+                                                                (
+                                                                    [0] => name
+                                                                )
+
+                                                            [paramNamesPath:protected] => Array
+                                                                (
+                                                                )
+
+                                                            [methods:protected] => Array
+                                                                (
+                                                                    [0] => GET
+                                                                    [1] => HEAD
+                                                                )
+
+                                                            [middleware:protected] => Array
+                                                                (
+                                                                )
+
+                                                        )
+
+                                                )
+
+                                            [namedRoutes:protected] => 
+                                            [matchedRoutes:protected] => Array
+                                                (
+                                                )
+
+                                            [notFound:protected] => Closure Object
+                                                (
+                                                    [static] => Array
+                                                        (
+                                                            [app] => Slim\Slim Object
+ *RECURSION*
+                                                        )
+
+                                                )
+
+                                            [error:protected] => 
+                                        )
+
+                                    [view:protected] => Slim\View Object
+                                        (
+                                            [templatePath:protected] => 
+                                            [data:protected] => Array
+                                                (
+                                                    [flash] => Slim\Middleware\Flash Object
+ *RECURSION*
+                                                )
+
+                                            [templatesDirectory:protected] => ./templates
+                                        )
+
+                                    [settings:protected] => Array
+                                        (
+                                            [mode] => development
+                                            [debug] => 1
+                                            [log.writer] => 
+                                            [log.level] => 4
+                                            [log.enabled] => 1
+                                            [templates.path] => ./templates
+                                            [view] => \Slim\View
+                                            [cookies.lifetime] => 20 minutes
+                                            [cookies.path] => /
+                                            [cookies.domain] => 
+                                            [cookies.secure] => 
+                                            [cookies.httponly] => 
+                                            [cookies.secret_key] => CHANGE_ME
+                                            [cookies.cipher] => rijndael-256
+                                            [cookies.cipher_mode] => cbc
+                                            [http.version] => 1.1
+                                        )
+
+                                    [mode:protected] => development
+                                    [middleware:protected] => Array
+                                        (
+                                            [0] => Slim\Middleware\PrettyExceptions Object
+                                                (
+                                                    [settings:protected] => Array
+                                                        (
+                                                        )
+
+                                                    [app:protected] => Slim\Slim Object
+ *RECURSION*
+                                                    [next:protected] => Slim\Middleware\MethodOverride Object
+                                                        (
+                                                            [settings:protected] => Array
+                                                                (
+                                                                    [key] => _METHOD
+                                                                )
+
+                                                            [app:protected] => Slim\Slim Object
+ *RECURSION*
+                                                            [next:protected] => Slim\Middleware\Flash Object
+ *RECURSION*
+                                                        )
+
+                                                )
+
+                                            [1] => Slim\Middleware\MethodOverride Object
+                                                (
+                                                    [settings:protected] => Array
+                                                        (
+                                                            [key] => _METHOD
+                                                        )
+
+                                                    [app:protected] => Slim\Slim Object
+ *RECURSION*
+                                                    [next:protected] => Slim\Middleware\Flash Object
+ *RECURSION*
+                                                )
+
+                                            [2] => Slim\Middleware\Flash Object
+ *RECURSION*
+                                            [3] => Slim\Slim Object
+ *RECURSION*
+                                        )
+
+                                    [hooks:protected] => Array
+                                        (
+                                            [slim.before] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                        )
+
+                                                )
+
+                                            [slim.before.router] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                        )
+
+                                                )
+
+                                            [slim.before.dispatch] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                        )
+
+                                                )
+
+                                            [slim.after.dispatch] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                        )
+
+                                                )
+
+                                            [slim.after.router] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                        )
+
+                                                )
+
+                                            [slim.after] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                        )
+
+                                                )
+
+                                        )
+
+                                )
+
+                            [next:protected] => Slim\Slim Object
+                                (
+                                    [name:protected] => default
+                                    [environment:protected] => Slim\Environment Object
+ *RECURSION*
+                                    [request:protected] => Slim\Http\Request Object
+ *RECURSION*
+                                    [response:protected] => Slim\Http\Response Object
+                                        (
+                                            [status:protected] => 200
+                                            [header:protected] => Slim\Http\Headers Object
+                                                (
+                                                    [headers:protected] => Array
+                                                        (
+                                                            [content-type] => text/html
+                                                        )
+
+                                                    [map:protected] => Array
+                                                        (
+                                                            [content-type] => Content-Type
+                                                        )
+
+                                                )
+
+                                            [body:protected] => 
+                                            [length:protected] => 0
+                                        )
+
+                                    [router:protected] => Slim\Router Object
+                                        (
+                                            [resourceUri:protected] => /
+                                            [routes:protected] => Array
+                                                (
+                                                    [0] => Slim\Route Object
+                                                        (
+                                                            [pattern:protected] => /package
+                                                            [callable:protected] => Closure Object
+                                                                (
+                                                                )
+
+                                                            [conditions:protected] => Array
+                                                                (
+                                                                )
+
+                                                            [name:protected] => 
+                                                            [params:protected] => Array
+                                                                (
+                                                                )
+
+                                                            [paramNames:protected] => Array
+                                                                (
+                                                                )
+
+                                                            [paramNamesPath:protected] => Array
+                                                                (
+                                                                )
+
+                                                            [methods:protected] => Array
+                                                                (
+                                                                    [0] => GET
+                                                                    [1] => HEAD
+                                                                )
+
+                                                            [middleware:protected] => Array
+                                                                (
+                                                                )
+
+                                                        )
+
+                                                    [1] => Slim\Route Object
+                                                        (
+                                                            [pattern:protected] => /package/:name
+                                                            [callable:protected] => Closure Object
+                                                                (
+                                                                    [parameter] => Array
+                                                                        (
+                                                                            [$name] => <required>
+                                                                        )
+
+                                                                )
+
+                                                            [conditions:protected] => Array
+                                                                (
+                                                                )
+
+                                                            [name:protected] => 
+                                                            [params:protected] => Array
+                                                                (
+                                                                )
+
+                                                            [paramNames:protected] => Array
+                                                                (
+                                                                    [0] => name
+                                                                )
+
+                                                            [paramNamesPath:protected] => Array
+                                                                (
+                                                                )
+
+                                                            [methods:protected] => Array
+                                                                (
+                                                                    [0] => GET
+                                                                    [1] => HEAD
+                                                                )
+
+                                                            [middleware:protected] => Array
+                                                                (
+                                                                )
+
+                                                        )
+
+                                                )
+
+                                            [namedRoutes:protected] => 
+                                            [matchedRoutes:protected] => Array
+                                                (
+                                                )
+
+                                            [notFound:protected] => Closure Object
+                                                (
+                                                    [static] => Array
+                                                        (
+                                                            [app] => Slim\Slim Object
+ *RECURSION*
+                                                        )
+
+                                                )
+
+                                            [error:protected] => 
+                                        )
+
+                                    [view:protected] => Slim\View Object
+                                        (
+                                            [templatePath:protected] => 
+                                            [data:protected] => Array
+                                                (
+                                                    [flash] => Slim\Middleware\Flash Object
+ *RECURSION*
+                                                )
+
+                                            [templatesDirectory:protected] => ./templates
+                                        )
+
+                                    [settings:protected] => Array
+                                        (
+                                            [mode] => development
+                                            [debug] => 1
+                                            [log.writer] => 
+                                            [log.level] => 4
+                                            [log.enabled] => 1
+                                            [templates.path] => ./templates
+                                            [view] => \Slim\View
+                                            [cookies.lifetime] => 20 minutes
+                                            [cookies.path] => /
+                                            [cookies.domain] => 
+                                            [cookies.secure] => 
+                                            [cookies.httponly] => 
+                                            [cookies.secret_key] => CHANGE_ME
+                                            [cookies.cipher] => rijndael-256
+                                            [cookies.cipher_mode] => cbc
+                                            [http.version] => 1.1
+                                        )
+
+                                    [mode:protected] => development
+                                    [middleware:protected] => Array
+                                        (
+                                            [0] => Slim\Middleware\PrettyExceptions Object
+                                                (
+                                                    [settings:protected] => Array
+                                                        (
+                                                        )
+
+                                                    [app:protected] => Slim\Slim Object
+ *RECURSION*
+                                                    [next:protected] => Slim\Middleware\MethodOverride Object
+                                                        (
+                                                            [settings:protected] => Array
+                                                                (
+                                                                    [key] => _METHOD
+                                                                )
+
+                                                            [app:protected] => Slim\Slim Object
+ *RECURSION*
+                                                            [next:protected] => Slim\Middleware\Flash Object
+ *RECURSION*
+                                                        )
+
+                                                )
+
+                                            [1] => Slim\Middleware\MethodOverride Object
+                                                (
+                                                    [settings:protected] => Array
+                                                        (
+                                                            [key] => _METHOD
+                                                        )
+
+                                                    [app:protected] => Slim\Slim Object
+ *RECURSION*
+                                                    [next:protected] => Slim\Middleware\Flash Object
+ *RECURSION*
+                                                )
+
+                                            [2] => Slim\Middleware\Flash Object
+ *RECURSION*
+                                            [3] => Slim\Slim Object
+ *RECURSION*
+                                        )
+
+                                    [hooks:protected] => Array
+                                        (
+                                            [slim.before] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                        )
+
+                                                )
+
+                                            [slim.before.router] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                        )
+
+                                                )
+
+                                            [slim.before.dispatch] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                        )
+
+                                                )
+
+                                            [slim.after.dispatch] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                        )
+
+                                                )
+
+                                            [slim.after.router] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                        )
+
+                                                )
+
+                                            [slim.after] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                        )
+
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                    [slim.request.query_hash] => Array
+                        (
+                        )
+
+                    [slim.request.form_hash] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+
+
+Array
+(
+    [Host] => ckan.localhost
+    [User-Agent] => Mozilla/5.0 (Windows NT 5.1; rv:29.0) Gecko/20100101 Firefox/29.0
+    [Accept] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [Accept-Language] => it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3
+    [Accept-Encoding] => gzip, deflate
+    [Connection] => keep-alive
+    [Cache-Control] => max-age=0
+)
+
+
+Array
+(
+    [Host] => ckan.localhost
+    [User-Agent] => Mozilla/5.0 (Windows NT 5.1; rv:29.0) Gecko/20100101 Firefox/29.0
+    [Accept] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [Accept-Language] => it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3
+    [Accept-Encoding] => gzip, deflate
+    [Connection] => keep-alive
+    [Cache-Control] => max-age=0
+)
+
+
+Array
+(
+    [Host] => ckan.localhost
+    [User-Agent] => Mozilla/5.0 (Windows NT 5.1; rv:29.0) Gecko/20100101 Firefox/29.0
+    [Accept] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [Accept-Language] => it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3
+    [Accept-Encoding] => gzip, deflate
+    [Connection] => keep-alive
+    [Cache-Control] => max-age=0
+)
+
+
+Array
+(
+    [Host] => ckan.localhost
+    [User-Agent] => Mozilla/5.0 (Windows NT 5.1; rv:29.0) Gecko/20100101 Firefox/29.0
+    [Accept] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [Accept-Language] => it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3
+    [Accept-Encoding] => gzip, deflate
+    [Connection] => keep-alive
+)
+
+Array
+(
+)
+
+citydynamics:1.0.0:admin
+
+Array
+(
+    [Host] => ckan.localhost
+    [User-Agent] => Mozilla/5.0 (Windows NT 5.1; rv:29.0) Gecko/20100101 Firefox/29.0
+    [Accept] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [Accept-Language] => it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3
+    [Accept-Encoding] => gzip, deflate
+    [Connection] => keep-alive
+    [Cache-Control] => max-age=0
+)
+
+Array
+(
+)
+
+citydynamics:1.0.0:admin
+
+Array
+(
+    [Host] => ckan.localhost
+    [User-Agent] => Mozilla/5.0 (Windows NT 5.1; rv:29.0) Gecko/20100101 Firefox/29.0
+    [Accept] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [Accept-Language] => it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3
+    [Accept-Encoding] => gzip, deflate
+    [Connection] => keep-alive
+    [Cache-Control] => max-age=0
+)
+
+Array
+(
+)
+
+citydynamics:1.0.0:admin
+
+Array
+(
+    [Host] => ckan.localhost
+    [User-Agent] => Mozilla/5.0 (Windows NT 5.1; rv:29.0) Gecko/20100101 Firefox/29.0
+    [Accept] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [Accept-Language] => it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3
+    [Accept-Encoding] => gzip, deflate
+    [Connection] => keep-alive
+    [Cache-Control] => max-age=0
+)
+
+Array
+(
+)
+
+citydynamics:1.0.0:admin
+
+Array
+(
+    [Host] => ckan.localhost
+    [User-Agent] => Mozilla/5.0 (Windows NT 5.1; rv:29.0) Gecko/20100101 Firefox/29.0
+    [Accept] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [Accept-Language] => it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3
+    [Accept-Encoding] => gzip, deflate
+    [Connection] => keep-alive
+    [Cache-Control] => max-age=0
+)
+
+Array
+(
+)
+
+citydynamics:1.0.0:admin
