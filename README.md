@@ -11,3 +11,5 @@ The service exposes two API:
 - /package/:id to get the Package Metadata
 
 These API will allow to federate and catalogue APIs present in the API Manager from a CKAN portal of a federation system like the HOMER one.
+
+This service is developed as part of the Open-DAI platform (http://www.open-dai.eu) and released with a GPL v2 licence.
