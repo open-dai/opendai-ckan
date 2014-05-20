@@ -212,7 +212,6 @@ class Wso2API{
 				return $login_result;
 			}
 		}
-
 	
 		$get_api_url = $this->api_server . $this->get_api_url;
 
@@ -239,7 +238,6 @@ class Wso2API{
 			}
 		}
 		return true;
-	
 	}	
 
  
@@ -253,7 +251,6 @@ class Wso2API{
 		}
 
 		$get_api_url = $this->api_server . $this->get_all_api_url . '?action=getAllAPIs';
-		$call_api_post = array('action'  => "getAllAPIs",);
 		if ($this->debug) error_log('get_api_url: '.print_r($get_api_url, TRUE)); 
 		$published_api_list_ret = $this->curl->get($get_api_url, 
 											 $this->curl_options);

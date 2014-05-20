@@ -735,3 +735,49 @@ Array
 )
 
 citydynamics:1.0.0:admin
+
+Array
+(
+    [Host] => ckan.localhost
+    [User-Agent] => Mozilla/5.0 (Windows NT 5.1; rv:29.0) Gecko/20100101 Firefox/29.0
+    [Accept] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [Accept-Language] => it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3
+    [Accept-Encoding] => gzip, deflate
+    [Connection] => keep-alive
+    [Cache-Control] => max-age=0
+)
+
+Array
+(
+)
+
+citydynamics:1.0.0:admin
+
+Array
+(
+    [Host] => ckan.localhost
+    [User-Agent] => Mozilla/5.0 (Windows NT 5.1; rv:29.0) Gecko/20100101 Firefox/29.0
+    [Accept] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [Accept-Language] => it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3
+    [Accept-Encoding] => gzip, deflate
+    [Connection] => keep-alive
+    [Cache-Control] => max-age=0
+)
+
+
+Array
+(
+    [Host] => ckan.localhost
+    [User-Agent] => Mozilla/5.0 (Windows NT 5.1; rv:29.0) Gecko/20100101 Firefox/29.0
+    [Accept] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [Accept-Language] => it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3
+    [Accept-Encoding] => gzip, deflate
+    [Connection] => keep-alive
+    [Cache-Control] => max-age=0
+)
+
+Array
+(
+)
+
+citydynamics:1.0.0:admin
