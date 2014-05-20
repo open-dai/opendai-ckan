@@ -6,6 +6,7 @@
  * @license GPLv2
  * @author Luca Gioppo
  * @created 28/11/2013
+ * @version 0.1
  */
 include ('wso2api.class.php');
 

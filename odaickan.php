@@ -1,4 +1,15 @@
 <?php
+/**
+ * odaiCKAN service
+ * 
+ * A service to expose API published in WSO2 Api Manager to CKAN catalogues
+ * 
+ * @copyright 2013 Luca Gioppo
+ * @license GPLv2
+ * @author Luca Gioppo
+ * @created 28/11/2013
+ * @version 0.1
+ */
 require 'Slim/Slim.php';
 include 'ckan_converter.class.php';
 \Slim\Slim::registerAutoloader ();
