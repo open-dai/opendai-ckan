@@ -11,6 +11,9 @@
  * @version 0.1
  */
 require 'Slim/Slim.php';
+$serverApi = "http://10.118.8.61:9763";
+$serverApiUser = 'admin';
+$serverApiPwd = 'admin';
 include 'ckan_converter.class.php';
 \Slim\Slim::registerAutoloader ();
 
@@ -40,7 +43,7 @@ $app = new \Slim\Slim ( array (
 // /PACKAGE
 // --------------------------------------------------------------------------------
 
-$app->get ( '/package', function () {
+$app->get ( '/package', function () use ($serverApi,$serverApiUser,$serverApiPwd){
 	$fw = new \Slim\LogWriter ( @fopen ( 'log.txt', 'a' ) );
 	$app = \Slim\Slim::getInstance ();
 	$req = $app->request ();
@@ -49,7 +52,7 @@ $app->get ( '/package', function () {
 	$fw->write ( print_r ( $body, true ) );
 	$fw->write ( print_r ( $headers, true ) );
 	
-	$ckan = new Ckan_converter ( "http://10.118.8.67:9763", $user = 'admin', $password = 'admin', $debug = true );
+	$ckan = new Ckan_converter ( $serverApi, $user = $serverApiUser, $password = $serverApiPwd, $debug = true );
 	
 	$result = $ckan->getPackages ();
 	
@@ -60,7 +63,7 @@ $app->get ( '/package', function () {
 // /PACKAGE/:NAME
 // --------------------------------------------------------------------------------
 
-$app->get ( '/package/:name', function ($name) {
+$app->get ( '/package/:name', function ($name) use ($serverApi,$serverApiUser,$serverApiPwd){
 	$fw = new \Slim\LogWriter ( @fopen ( 'log.txt', 'a' ) );
 	$app = \Slim\Slim::getInstance ();
 	$req = $app->request ();
@@ -75,7 +78,7 @@ $app->get ( '/package/:name', function ($name) {
 	
 	list ( $apiname, $apiversion, $apiprovider ) = split ( ':', $name );
 	
-	$ckan = new Ckan_converter ( "http://10.118.8.67:9763", $user = 'admin', $password = 'admin', $debug = true );
+	$ckan = new Ckan_converter ( $serverApi, $user = $serverApiUser, $password = $serverApiPwd, $debug = true );
 	
 	$result = $ckan->getAPI ( $apiname, $apiversion, $apiprovider );
 	

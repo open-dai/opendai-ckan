@@ -18,6 +18,7 @@ include ('wso2api.class.php');
 class Ckan_converter {
 	private $wso2api;
 	private $debug = false;
+	private $arrAllowedProviders;
 	
 	/**
 	 * Class constructor
@@ -30,10 +31,12 @@ class Ckan_converter {
 	function __construct($api_server, $user = 'admin', $password = 'admin', $debug = false) {
 		$this->wso2api = new Wso2API ( $api_server, $user, $password, $debug );
 		$this->debug = $debug;
+		$this->getAllowedProviders();
 		if ($this->debug) {
 			error_log ( print_r ( 'api_server: ' . $api_server, TRUE ) );
 			error_log ( print_r ( 'user: ' . $user, TRUE ) );
 			error_log ( print_r ( 'password: ' . $password, TRUE ) );
+			error_log ( print_r ( 'arrAllowedProviders: ' . $this->arrAllowedProviders, TRUE ) );
 		}
 	}
 	
@@ -49,8 +52,13 @@ class Ckan_converter {
 		if ($ret) {
 			foreach ( $this->wso2api->response->apis as $value ) {
 				if ($value->status == 'PUBLISHED') {
-					$finishname = $value->name . ':' . $value->version . ':' . $value->provider;
-					$apis [] = $finishname;
+					foreach ( $this->arrAllowedProviders as $provider ) {
+						if($provider == $value->provider){
+							$finishname = $value->name . ':' . $value->version . ':' . $value->provider;
+							$apis [] = $finishname;
+							break;
+						}
+					}
 				}
 			}
 		} else {
@@ -149,6 +157,12 @@ class Ckan_converter {
 		$ckanapi ["rating_count"] = '';
 		$ckanapi ["revision_id"] = '';
 		return $ckanapi;
+	}
+
+	function getAllowedProviders(){
+		$str = file_get_contents('./allowedProviders.json');
+		error_log ( print_r ( 'str: ' . $str, TRUE ) );
+		$this->arrAllowedProviders = json_decode($str, true); // decode the JSON into an associative array
 	}
 }
 
