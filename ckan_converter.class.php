@@ -119,15 +119,15 @@ class Ckan_converter {
 			echo 'Error message' . $this->wso2api->error_message;
 			echo 'Error message code' . $this->wso2api->error_code;
 		}
-		
+
 		$ckanapi = array ();
-		$ckanapi ["license_title"] = $swagger->info->license;
+		$ckanapi ["license_title"] = empty($swagger->info->license)?'':$swagger->info->license;
 		$ckanapi ["mantainer"] = $theAPI->api->techOwner;
 		$ckanapi ["mantainer_email"] = $theAPI->api->techOwnerMail;
 		$ckanapi ["id"] = $apiname . ':' . $apiversion . ':' . $apiprovider;
 		$ckanapi ["metadata_created"] = date ( "d-m-Y H:i:s", $theAPI->api->lastUpdated / 1000 );
 		$ckanapi ["relationships"] = array ();
-		$ckanapi ["license"] = $swagger->info->license;
+		$ckanapi ["license"] = empty($swagger->info->license)?'':$swagger->info->license;
 		$ckanapi ["metadata_modified"] = date ( "d-m-Y H:i:s", $theAPI->api->lastUpdated / 1000 );
 		$ckanapi ["author"] = $theAPI->api->bizOwner;
 		$ckanapi ["author_email"] = $theAPI->api->bizOwnerMail;
@@ -144,7 +144,7 @@ class Ckan_converter {
 		$ckanapi ["name"] = $apiname;
 		$ckanapi ["isopen"] = true;
 		$ckanapi ["notes_rendered"] = '';
-		$ckanapi ["url"] = $swagger->basePath . '/' . $apiname . '/' . $apiversion;
+		$ckanapi ["url"] = (empty($swagger->basePath)?'':$swagger->basePath) . '/' . $apiname . '/' . $apiversion;
 		$ckanapi ["ckan_url"] = '';
 		$ckanapi ["notes"] = $theAPI->api->description;
 		$ckanapi ["title"] = $apiname;
@@ -152,7 +152,8 @@ class Ckan_converter {
 		$ckanapi ["extras"] = array (
 				"release-notes" => '',
 				"unpublished" => false,
-				"publish-date" => '' 
+				"publish-date" => '' ,
+				"language" => empty($swagger->info->language)?'':$swagger->info->language
 		);
 		$ckanapi ["rating_count"] = '';
 		$ckanapi ["revision_id"] = '';
@@ -161,7 +162,6 @@ class Ckan_converter {
 
 	function getAllowedProviders(){
 		$str = file_get_contents('./allowedProviders.json');
-		error_log ( print_r ( 'str: ' . $str, TRUE ) );
 		$this->arrAllowedProviders = json_decode($str, true); // decode the JSON into an associative array
 	}
 }

@@ -21,6 +21,7 @@ class Wso2API {
 	private $curl;
 	private $curl_options;
 	private $api_server;
+	private $api_serverSwag;
 	private $api_user;
 	private $api_password;
 	private $isLoggedIn = false;
@@ -60,7 +61,8 @@ class Wso2API {
 				CURLOPT_USERAGENT => $agent,
 				CURLOPT_HEADER => 0 
 		);
-		$this->api_server = $api_server;
+		$this->api_server = 'http://' . $api_server;
+		$this->api_serverSwag = 'http://' . $user . ':' . $password . '@' . $api_server;
 		$this->api_user = $user;
 		$this->api_password = $password;
 		$this->debug = $debug;
@@ -344,7 +346,7 @@ class Wso2API {
 			}
 		}
 		
-		$get_swagger_url = $this->api_server . $this->get_api_swagger_url1 . $apiname . '-' . $apiversion . $this->get_api_swagger_url2;
+		$get_swagger_url = $this->api_serverSwag . $this->get_api_swagger_url1 . $apiname . '-' . $apiversion . $this->get_api_swagger_url2;
 		
 		$swagger_api_ret = $this->curl->get ( $get_swagger_url, $this->curl_options );
 		if ($this->debug)
@@ -353,7 +355,9 @@ class Wso2API {
 			error_log ( 'get_api_swagger: ' . print_r ( $swagger_api_ret, TRUE ) );
 			// two possible errors cURL and API manager
 		if ($this->curl->error_code) {
-			$this->error_message = 'Get all API list: ' . $this->curl->error_string;
+			$this->error_message = 'cURL ERROR get_api_swagger: ' . $this->curl->error_string;
+			if ($this->debug)
+				error_log ( 'cURl ERROR get_api_swagger: ' . print_r ( $this->curl->error_string, TRUE ) );
 		} else {
 			// have to interpret the return code to understand if the API returned error
 			$this->response = json_decode ( $swagger_api_ret );

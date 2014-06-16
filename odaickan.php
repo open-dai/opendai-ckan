@@ -54,6 +54,9 @@ $app->get ( '/package', function () use ($serverApi,$serverApiUser,$serverApiPwd
 	
 	$ckan = new Ckan_converter ( $serverApi, $user = $serverApiUser, $password = $serverApiPwd, $debug = true );
 	
+	$res = $app->response ();
+	$res ['Content-Type'] = 'application/json';
+
 	$result = $ckan->getPackages ();
 	
 	echo json_encode ( $result );
