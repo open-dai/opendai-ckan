@@ -11,7 +11,8 @@
  * @version 0.1
  */
 require 'Slim/Slim.php';
-$serverApi = "http://10.118.8.61:9763";
+$serverApi = "10.118.8.75:9763";
+$serverapistore = "api.opendai.eu/store";
 $serverApiUser = 'admin';
 $serverApiPwd = 'admin';
 include 'ckan_converter.class.php';
@@ -66,7 +67,7 @@ $app->get ( '/package', function () use ($serverApi,$serverApiUser,$serverApiPwd
 // /PACKAGE/:NAME
 // --------------------------------------------------------------------------------
 
-$app->get ( '/package/:name', function ($name) use ($serverApi,$serverApiUser,$serverApiPwd){
+$app->get ( '/package/:name', function ($name) use ($serverApi,$serverApiUser,$serverApiPwd, $serverapistore){
 	$fw = new \Slim\LogWriter ( @fopen ( 'log.txt', 'a' ) );
 	$app = \Slim\Slim::getInstance ();
 	$req = $app->request ();
@@ -83,7 +84,7 @@ $app->get ( '/package/:name', function ($name) use ($serverApi,$serverApiUser,$s
 	
 	$ckan = new Ckan_converter ( $serverApi, $user = $serverApiUser, $password = $serverApiPwd, $debug = true );
 	
-	$result = $ckan->getAPI ( $apiname, $apiversion, $apiprovider );
+	$result = $ckan->getAPI ( $apiname, $apiversion, $apiprovider, $serverapistore );
 	
 	$res = $app->response ();
 	$res ['Content-Type'] = 'application/json';

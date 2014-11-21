@@ -77,7 +77,7 @@ class Ckan_converter {
 	 * @param string $apiprovider        	
 	 * @return array
 	 */
-	function getAPI($apiname, $apiversion, $apiprovider) {
+	function getAPI($apiname, $apiversion, $apiprovider, $serverapistore) {
 		// variables for holding the whole API data
 		$thePackage;
 		$theAPI;
@@ -134,26 +134,27 @@ class Ckan_converter {
 		$ckanapi ["version"] = $apiversion;
 		$ckanapi ["licence_id"] = '';
 		$ckanapi ["type"] = null;
-		$ckanapi ["resources"] = array ();
+		$ckanapi ["groups"] = array ();
 		$ckanapi ["tags"] = split ( ',', $theAPI->api->tags );
 		$ckanapi ["tracking_summary"] = array (
 				"total" => 0,
 				"summary" => 0 
 		);
-		$ckanapi ["groups"] = '';
+		$ckanapi ["resources"] = '';
 		$ckanapi ["name"] = $apiname;
 		$ckanapi ["isopen"] = true;
 		$ckanapi ["notes_rendered"] = '';
 		$ckanapi ["url"] = (empty($swagger->basePath)?'':$swagger->basePath) . '/' . $apiname . '/' . $apiversion;
+		$ckanapi ["url"] = 'http://' . $serverapistore . '/apis/info?name%3D' . $apiname . '%26version%3D' . $apiversion . "%26provider%3D" . $apiprovider;
 		$ckanapi ["ckan_url"] = '';
 		$ckanapi ["notes"] = $theAPI->api->description;
 		$ckanapi ["title"] = $apiname;
 		$ckanapi ["ratings_average"] = null;
 		$ckanapi ["extras"] = array (
-				"release-notes" => '',
-				"unpublished" => false,
-				"publish-date" => '' ,
-				"language" => empty($swagger->info->language)?'':$swagger->info->language
+//				"release-notes" => '',
+				"topic" => "",
+//				"publish-date" => '' ,
+//				"language" => empty($swagger->info->language)?'':$swagger->info->language
 		);
 		$ckanapi ["rating_count"] = '';
 		$ckanapi ["revision_id"] = '';
